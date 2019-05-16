@@ -1,4 +1,4 @@
-package com.socialmedia.model;
+package org.SocialMediaData.model;
 
 public class PinterestPost extends SocialMediaPost {
 	
