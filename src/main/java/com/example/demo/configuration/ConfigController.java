@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/config")
 public class ConfigController {
 	
-	@Value("${bar}")
+	@Value("${bar:#{null}}")
     private String bar;
 	
 	private final JavaInjectedService javaService;

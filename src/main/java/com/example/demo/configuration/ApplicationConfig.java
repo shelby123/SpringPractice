@@ -14,7 +14,7 @@ import com.mongodb.MongoClientURI;
 public class ApplicationConfig extends AbstractMongoConfiguration {
 
 
-	@Value("${mongo}")
+	@Value("${mongo:#{null}}}")
     private String mongo;
 
 	@Override
