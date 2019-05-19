@@ -4,7 +4,7 @@ executors:
     environment:
       IMAGE_NAME: shelby123/spring-practice
     docker:
-      - image: circleci/buildpack-deps:stretch
+      - image: circleci/openjdk:8-jdk-browsers 
 jobs:
   build:
     working_directory: ~/circleci-demo-java-spring 
