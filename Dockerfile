@@ -2,8 +2,6 @@ FROM openjdk:8-jdk-alpine
 
 RUN pwd
 RUN ls -al
-RUN mvn clean install
-RUN ls -al
 
 COPY /target/SpringPractice-0.0.1-SNAPSHOT.jar /app/app.jar
 
