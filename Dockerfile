@@ -2,6 +2,7 @@ FROM openjdk:8-jdk-alpine
 
 RUN pwd
 RUN ls -al
+RUN ls var/lib/docker/tmp/docker-builder*
 
 COPY /target/SpringPractice-0.0.1-SNAPSHOT.jar /app/app.jar
 
