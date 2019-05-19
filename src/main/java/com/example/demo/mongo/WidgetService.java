@@ -1,5 +1,7 @@
 package com.example.demo.mongo;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +16,10 @@ public class WidgetService {
 		Widget newWidget = new Widget();
 		newWidget.setNumparts(numparts);
 		return repo.save(newWidget);
+	}
+	
+	public List<Widget> getWidgetsByNumParts(int numparts) {
+		return repo.findByNumparts(numparts);
 	}
 	
 	

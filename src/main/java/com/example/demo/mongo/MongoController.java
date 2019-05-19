@@ -1,5 +1,7 @@
 package com.example.demo.mongo;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +19,11 @@ public class MongoController {
 	public Widget getWidget(@PathVariable("numParts") int numParts) {
 		return widgetService.addWidget(numParts);
 		
+	}
+	
+	@GetMapping("/find/{numParts}")
+	public List<Widget> findWidgetByNumParts(@PathVariable("numParts") int numparts) {
+		return widgetService.getWidgetsByNumParts(numparts);
 	}
 
 }
