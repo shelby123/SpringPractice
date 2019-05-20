@@ -18,7 +18,6 @@ public class MongoController {
 	@GetMapping("/{numParts}")
 	public Widget getWidget(@PathVariable("numParts") int numParts) {
 		return widgetService.addWidget(numParts);
-		
 	}
 	
 	@GetMapping("/find/{numParts}")

@@ -27,6 +27,11 @@ public class DemoRestController {
 		return "You sent request body with : " + model.toString();
 	}
 	
+	@PostMapping(value="/nestedPostObject")
+	public String nestedPostObject(@RequestBody NestedDemoModel model) {
+		return "You sent request body with : " + model.toString();
+	}
+	
 	@GetMapping(value="/jsonResponse")
 	@ResponseBody
 	public DemoModel jsonResponse()  {
