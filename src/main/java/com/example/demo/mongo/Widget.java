@@ -1,18 +1,19 @@
 package com.example.demo.mongo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="widgetCollection")
+@Document()
 public class Widget {
 
 	
 	@Id
 	private String id;
 	
-	private List<Gizmo> gizmos;
+	private List<Gizmo> gizmos = new ArrayList<Gizmo>();
 	
 	private int numparts;
 
